@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Open+Sans&family=Poppins:wght@400;500;600;700&display=swap');
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+:root {
+    --Red: hsl(0, 100%, 74%); 
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --DarkBlue: hsl(249, 10%, 26%);
+    --GrayishBlue: hsl(246, 25%, 77%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    height: calc(100vh - 0.1px);
+    background-image: url("./images/bg-intro-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--Red);
+    padding: 10%;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    max-width: 500px;
+    min-width: 350px;
+}
+
+.container-right {
+    min-width: 46%;
+    display: flex;
+    flex-direction: column;
+}
+
+.promo {
+    text-align: center;
+    background-color: var(--Blue);
+    color: white;
+    font-family: "Poppins",sans-serif;
+    font-weight: 400;
+    padding: 1.5rem;
+    border-radius: 0.6rem;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.150);
+    margin-bottom: 2rem;
+}
+
+.promo:before {
+    content: 'Try it free 7 days';
+    font-weight: 700;
+}
+
+.user-input {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-radius: 0.6rem;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.150);
+}
+
+input {
+    width: 100%;
+    height: 3rem;
+    border: solid 1px var(--GrayishBlue);
+    padding-left: 2rem;
+    color: var(--DarkBlue);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    z-index: 3;
+    background-color: transparent;
+    border-radius: 0.3rem;
+}
+
+#pwd,#emailtext,#lastnametext,#firstnametext {
+    z-index: 2;
+    font-size: 13.5px;
+    color: var(--DarkBlue);
+    font-family: "Poppins",sans-serif;
+    font-weight: 500;
+    margin-top: -2.8rem;
+    margin-left: 2.1rem;
+    transform: translate(0%,-0.8rem);
+}
+
+h1 {
+    color: white;
+    font-family: "Poppins",sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    color:  white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.TOS {
+    width: 100%;
+    color: var(--GrayishBlue);
+    font-weight: 40;
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.TOS a {
+    color: var(--Red);
+}
+
+.btn-claim {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0 12px 0rem;
+    background-color: var(--Green);
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins",sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 0.3rem;
+    box-shadow: 0px 4px 0px hsl(154, 56%, 43%);
+    border: none;
+}
+
+.warning {
+    color: var(--Red);
+    font-size: 0.7rem;
+    font-style: italic;
+    margin-top: -1rem;
+    margin-bottom: -0.2rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.emailexample {
+    z-index: 2;
+    font-size: 13.5px;
+    color: var(--Red);
+    font-family: "Poppins",sans-serif;
+    font-weight: 500;
+    margin-top: -2.8rem;
+    margin-left: 2.1rem;
+    transform: translate(0%,-0.8rem);
+}
+
+.hidden {
+    display: none;
+}
+
+@media  (max-width: 750px){
+
+    body {
+        padding: 10% 5% 10% 5%;
+        height: auto
+    }
+    
+    
+    main {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+
+    .container-left {
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 5rem;
+    }
+
+    .container-right {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    h1, p {
+        text-align: center;
+        max-width: none;
+    }
+    
+}
